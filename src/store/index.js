@@ -18,6 +18,7 @@ const store = new Vuex.Store({
     periodList: [],
     classroomList: [],
     appointmentList: [],
+    batchList: [],
   },
   getters: {
     getCount: state => {
@@ -61,6 +62,13 @@ const store = new Vuex.Store({
         return [];
       }
     },
+    getBatchList: state => {
+      if (state.batchList.length > 0) {
+        return state.batchList;
+      } else {
+        return [];
+      }
+    },
   },
   mutations: {
     increment(state) {
@@ -77,6 +85,9 @@ const store = new Vuex.Store({
     },
     updateAppointmentList(state, _input) {
       state.appointmentList = _input;
+    },
+    updateBatchList(state, _input) {
+      state.batchList = _input;
     },
   },
   actions: {
@@ -99,6 +110,11 @@ const store = new Vuex.Store({
       let { data } = await dofetch('/appointment/all');
       console.log(data);
       commit('updateAppointmentList', data);
+    },
+    async getAllBatch({ commit }) {
+      let { data } = await dofetch('/batch/all');
+      console.log(data);
+      commit('updateBatchList', data);
     },
   },
 });

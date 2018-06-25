@@ -54,6 +54,14 @@
             <v-list-tile-title>appointment</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
+        <v-list-tile @click="$router.push('/batch')">
+          <v-list-tile-action>
+            <v-icon>chrome_reader_mode</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Batch</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
       </v-list>
     </v-navigation-drawer>
 

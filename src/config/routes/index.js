@@ -42,6 +42,13 @@ export default [
     },
   },
   {
+    path: '/batch',
+    name: 'Batch',
+    component() {
+      return import('../../components/Batch.vue');
+    },
+  },
+  {
     path: '/card',
     name: 'Card',
     component() {
