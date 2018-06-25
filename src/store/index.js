@@ -54,6 +54,13 @@ const store = new Vuex.Store({
         return [];
       }
     },
+    getAppointmentList: state => {
+      if (state.appointmentList.length > 0) {
+        return state.appointmentList;
+      } else {
+        return [];
+      }
+    },
   },
   mutations: {
     increment(state) {
@@ -67,6 +74,9 @@ const store = new Vuex.Store({
     },
     updateClassroomList(state, _input) {
       state.classroomList = _input;
+    },
+    updateAppointmentList(state, _input) {
+      state.appointmentList = _input;
     },
   },
   actions: {
@@ -84,6 +94,11 @@ const store = new Vuex.Store({
       let { data } = await dofetch('/classroom/all');
       console.log(data);
       commit('updateClassroomList', data);
+    },
+    async getAllAppointment({ commit }) {
+      let { data } = await dofetch('/appointment/all');
+      console.log(data);
+      commit('updateAppointmentList', data);
     },
   },
 });

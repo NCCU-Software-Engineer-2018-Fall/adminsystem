@@ -35,6 +35,13 @@ export default [
     },
   },
   {
+    path: '/appointment',
+    name: 'Appointment',
+    component() {
+      return import('../../components/Appointment.vue');
+    },
+  },
+  {
     path: '/card',
     name: 'Card',
     component() {

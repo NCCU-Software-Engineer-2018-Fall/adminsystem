@@ -46,7 +46,7 @@
             <v-list-tile-title>Classroom</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile @click="goToUser">
+        <v-list-tile @click="$router.push('/appointment')">
           <v-list-tile-action>
             <v-icon>assignment</v-icon>
           </v-list-tile-action>
