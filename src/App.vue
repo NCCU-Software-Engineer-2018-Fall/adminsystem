@@ -93,11 +93,11 @@ export default {
   }),
   methods: {
     goToUser() {
-      this.$router.push('/user')
+      this.$router.push('/user');
     },
     goToPeriod() {
-      this.$router.push('/period')
+      this.$router.push('/period');
     },
-  }
+  },
 };
 </script>
